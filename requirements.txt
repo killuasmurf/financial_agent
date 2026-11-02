@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+redis
+python-dotenv
+pydantic-settings
+jinja2
+websockets
+celery
+pymupdf
+langgraph 
+langchain-openai 
+pydantic
+langchain-google-genai 
+psycopg2-binary 
+sqlalchemy 
+pgvector
