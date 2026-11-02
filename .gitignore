@@ -1,0 +1,28 @@
+# Secrets (CRITICAL: Never commit API keys or database passwords)
+.env
+
+# Python Virtual Environments
+venv/
+env/
+.venv/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Project Data (Ignore large PDFs and unstructured data dumps)
+data/
+*.pdf
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# VS Code & IDEs
+.vscode/
+.idea/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
