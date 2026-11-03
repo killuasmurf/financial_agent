@@ -3,7 +3,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 from pgvector.sqlalchemy import Vector
 from app.config import settings
 
-engine = create_engine(settings.DATABASE_URL.replace("postgresql+psycopg", "postgresql+psycopg2"))
+engine = create_engine(settings.DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
@@ -15,8 +15,8 @@ class DocumentChunkAnalysis(Base):
     chunk_index = Column(Integer, nullable=False)
     file_name = Column(String)
     chunk_text = Column(Text)
-    # We allocate 768 dimensions, which is standard for many embedding models
-    chunk_embedding = Column(Vector(768)) 
+    # We allocate 3072 dimensions, which is standard for many embedding models
+    chunk_embedding = Column(Vector(3072)) 
 
 def init_db() -> None:
     """Create the pgvector extension and application tables when the service starts."""

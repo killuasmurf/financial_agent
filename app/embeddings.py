@@ -8,7 +8,7 @@ from pydantic import SecretStr
 def get_embeddings_model() -> GoogleGenerativeAIEmbeddings:
     """Create the embedding client only when document work is requested."""
     return GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-004",
+        model="gemini-embedding-2-preview",
         api_key=(
             SecretStr(settings.GOOGLE_API_KEY)
             if settings.GOOGLE_API_KEY is not None

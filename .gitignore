@@ -11,10 +11,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Project Data (Ignore large PDFs and unstructured data dumps)
-data/
-*.pdf
-
 # Celery
 celerybeat-schedule
 celerybeat.pid

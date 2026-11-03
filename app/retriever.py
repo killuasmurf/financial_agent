@@ -6,7 +6,7 @@ from sqlalchemy import select
 @tool
 def search_financial_documents(query: str) -> str:
     """Searches ingested financial documents for context relevant to the user's query."""
-    # Convert the text query into a 768-dimensional vector
+    # Convert the text query into a 3072-dimensional vector
     query_vector = get_embeddings_model().embed_query(query)
     
     db = SessionLocal()
