@@ -22,7 +22,7 @@ tools = [search_financial_documents]
 def get_react_agent():
     
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model="gemini-3.8-flash",
         temperature=0,
         google_api_key=settings.GOOGLE_API_KEY,
     ).bind_tools(tools)
